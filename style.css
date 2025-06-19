@@ -1,17 +1,5 @@
 /* Reset some default styles */
-* 
-.intro {
-  margin-top: 15px;
-  font-size: 1.15em;
-  color: #ddd;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.8;
-  font-weight: 300;
-}
-
-{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -22,36 +10,58 @@ body {
   line-height: 1.6;
   background: #f4f4f4;
   color: #333;
-  padding: 20px;
+  padding: 1.5rem;
 }
 
 header {
   background: #222;
   color: #fff;
-  padding: 20px;
+  padding: 2rem;
   text-align: center;
 }
 
+.intro {
+  margin-top: 1rem;
+  font-size: 1.15rem;
+  color: #ddd;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
 nav {
-  margin-top: 10px;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
-  margin: 0 10px;
+  padding: 0.5rem 1rem;
+  background: #444;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: #666;
 }
 
 section {
-  margin: 20px 0;
+  margin: 2rem 0;
   background: #fff;
-  padding: 20px;
+  padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 h2 {
-  margin-bottom: 10px;
+  margin-bottom: 0.75rem;
   color: #444;
 }
 
@@ -61,7 +71,7 @@ ul {
 
 footer {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 2rem;
   font-size: 0.9em;
   color: #555;
 }
@@ -69,6 +79,15 @@ footer {
 /* Responsive styles */
 @media (max-width: 768px) {
   body {
-    padding: 10px;
+    padding: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro {
+    font-size: 1rem;
   }
 }
